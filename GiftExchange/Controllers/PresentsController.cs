@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiftExchange.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace GiftExchange.Controllers
         // GET: Presents
         public ActionResult Index()
         {
-            return View();
+            var gifts = new GiftServices().GetAllGifts();
+            return View(gifts);
         }
     }
 }
