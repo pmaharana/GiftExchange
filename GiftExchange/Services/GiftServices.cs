@@ -55,12 +55,36 @@ namespace GiftExchange.Services
             }
         }
 
+        public void UpdateGift(Gift present)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var text = @"update [Gifts] 
+ Set Contents = @Contents, GiftHint = @GiftHint, ColorWrappingPaper = @ColorWrappingPaper, Height = @Height, Width = @Width, 
+ Depth = @Depth, Weight = @Weight, IsOpened = @IsOpened where Id = @Id;";
 
-                
+                var cmd = new SqlCommand(text, connection);
 
-            
+                cmd.Parameters.AddWithValue("@Contents", present.Contents);
+                cmd.Parameters.AddWithValue("@GiftHint", present.GiftHint);
+                cmd.Parameters.AddWithValue("@ColorWrappingPaper", present.ColorWrappingPaper);
+                cmd.Parameters.AddWithValue("@Height", present.Height);
+                cmd.Parameters.AddWithValue("@Width", present.Width);
+                cmd.Parameters.AddWithValue("@Depth", present.Depth);
+                cmd.Parameters.AddWithValue("@Weight", present.Weight);
+                cmd.Parameters.AddWithValue("@IsOpened", present.IsOpened);
+                cmd.Parameters.AddWithValue("@Id", present.Id);
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
 
-    
+            }
+        }
+
+
+
+
+
 
     }
 

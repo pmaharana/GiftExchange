@@ -25,6 +25,12 @@ namespace GiftExchange.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Update()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -35,8 +41,17 @@ namespace GiftExchange.Controllers
 
         }
 
-                
-           
+        [HttpPost]
+        public ActionResult Update(FormCollection collection)
+        {
+
+            var newGift = new Gift(collection);
+            giftService.UpdateGift(newGift);
+            return RedirectToAction("Index");
+
+        }
+
+
 
 
 
