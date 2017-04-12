@@ -1,3 +1,4 @@
+C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\obj\Debug\GiftExchange.csprojResolveAssemblyReference.cache
 C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\bin\ApplicationInsights.config
 C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\bin\roslyn\csc.exe
 C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\bin\roslyn\csc.exe.config
@@ -62,6 +63,5 @@ C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\bin\Microsoft.AI.Depen
 C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\bin\Microsoft.AI.Web.xml
-C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\obj\Debug\GiftExchange.csprojResolveAssemblyReference.cache
 C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\obj\Debug\GiftExchange.dll
 C:\Users\prana\tiy\week-5\day-2\GiftExchange\GiftExchange\obj\Debug\GiftExchange.pdb

@@ -33,8 +33,21 @@ namespace GiftExchange.Models
             this.IsOpened = (bool?)reader["IsOpened"];
         }
 
-        public Gift(FormCollection collection)
+        public Gift(FormCollection collection, int id = 0)
         {
+            if (id > 0)
+            {
+                this.Id = id;
+            }
+            else
+            {
+                int _id;
+                int.TryParse(collection["Id"], out _id);
+                if (_id > 0)
+                {
+                    this.Id = _id;
+                }
+            }
             this.Contents = collection["Contents"];
             this.GiftHint = collection["GiftHint"];
             this.ColorWrappingPaper = collection["ColorWrappingPaper"];

@@ -40,6 +40,7 @@ namespace GiftExchange.Services
 
                 var addCmd = new SqlCommand(text, connection);
 
+                
                 addCmd.Parameters.AddWithValue("@Contents", present.Contents);
                 addCmd.Parameters.AddWithValue("@GiftHint", present.GiftHint);
                 addCmd.Parameters.AddWithValue("@ColorWrappingPaper", present.ColorWrappingPaper);
