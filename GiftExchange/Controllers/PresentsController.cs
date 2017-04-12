@@ -44,15 +44,7 @@ namespace GiftExchange.Controllers
 
         }
 
-        //[HttpPost]
-        //public ActionResult Update(FormCollection collection)
-        //{
-
-        //    var newGift = new Gift(collection);
-        //    giftService.UpdateGift(newGift);
-        //    return RedirectToAction("Index");
-
-        //}
+     
 
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
@@ -62,8 +54,27 @@ namespace GiftExchange.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public ActionResult Open(int id)
+        {
+            var gift = giftService.GetAllGifts().First(f => f.Id == id);
+            return View(gift);
+        }
 
+        [HttpPost]
+        public ActionResult Open(Gift openGift)
+        {
 
+            giftService.OpenGift(openGift);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var gift = giftService.GetAllGifts().First(f => f.Id == id);
+            return View(gift);
+        }
 
     }
 

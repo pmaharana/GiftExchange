@@ -20,6 +20,11 @@ namespace GiftExchange.Models
         public bool? IsOpened { get; set; }
         public Gift() { }
 
+        public Gift(int id)
+        {
+            this.Id = id;
+        }
+
         public Gift(SqlDataReader reader)
         {
             this.Id = (int)reader["Id"];

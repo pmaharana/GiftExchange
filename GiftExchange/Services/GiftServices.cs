@@ -82,7 +82,22 @@ namespace GiftExchange.Services
             }
         }
 
+        public void OpenGift(Gift present)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var text = @"UPDATE [Gifts] " +
+                    " SET IsOpened = @IsOpened WHERE Id = @Id;";
 
+                var cmd = new SqlCommand(text, connection);
+
+                cmd.Parameters.AddWithValue("@IsOpened", true);
+                cmd.Parameters.AddWithValue("@Id", present.Id);
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
 
 
 
