@@ -99,6 +99,21 @@ namespace GiftExchange.Services
             }
         }
 
+        public void DeleteGift(Gift present)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var text = @"DELETE FROM [Gifts] " +
+                    " WHERE Id = @Id;";
+
+                var cmd = new SqlCommand(text, connection);
+                cmd.Parameters.AddWithValue("@Id", present.Id);
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                
+            }
+        }
 
 
 

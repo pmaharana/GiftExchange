@@ -76,6 +76,14 @@ namespace GiftExchange.Controllers
             return View(gift);
         }
 
+        [HttpPost]
+        public ActionResult Delete(Gift gift)
+        {
+
+            giftService.DeleteGift(gift);
+            return RedirectToAction("Index");
+        }
+
     }
 
 

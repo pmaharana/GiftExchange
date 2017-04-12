@@ -191,6 +191,7 @@
     <Content Include="Views\Presents\Create.cshtml" />
     <Content Include="Views\Presents\Edit.cshtml" />
     <Content Include="Views\Presents\Open.cshtml" />
+    <Content Include="Views\Presents\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
